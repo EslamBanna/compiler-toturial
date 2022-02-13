@@ -22,7 +22,8 @@ class MangerContoller extends Controller
                 'phone' => $request->phone,
                 'password' => bcrypt($request->password),
                 'address' => $request->address,
-                'photo' => $manager_photo
+                'photo' => $manager_photo,
+                'gender' => $request->gender
             ]);
             return $this->returnSuccessMessage('inserted successfully');
         } catch (\Exception $e) {
@@ -43,9 +44,9 @@ class MangerContoller extends Controller
     public function getManager($managerId)
     {
         try {
-            $manager = Manager::find($managerId);
-            if(!$manager){
-                return $this->returnError(202, 'this manager not founded');
+            $manager = Manager::with('malls')->find($managerId);
+            if (!$manager) {
+                return $this->returnError(202, 'this manager is not founded');
             }
             return $this->returnData('data', $manager);
         } catch (\Exception $e) {
@@ -53,4 +54,39 @@ class MangerContoller extends Controller
         }
     }
 
+    public function updateManager($managerId, Request $request)
+    {
+        try {
+            $manager = Manager::find($managerId);
+            if (!$manager) {
+                return $this->returnError(202, 'this manager is not founded');
+            }
+            $manager->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'password' => bcrypt($request->password),
+                'address' => $request->address,
+                // 'gender' => $request->gender
+            ]);
+            return $this->returnSuccessMessage('updated successfully');
+        } catch (\Exception $e) {
+            return $this->returnError(201, $e->getMessage());
+        }
+    }
+
+    public function deleteManager($managerId)
+    {
+        try {
+            $manager = Manager::find($managerId);
+            if (!$manager) {
+                return $this->returnError(202, 'this manager is not founded');
+            }
+            $manager->malls()->delete();
+            $manager->delete();
+            return $this->returnSuccessMessage('deleted successfully');
+        } catch (\Exception $e) {
+            return $this->returnError(201, $e->getMessage());
+        }
+    }
 }

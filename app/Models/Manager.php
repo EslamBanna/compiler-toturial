@@ -9,12 +9,17 @@ class Manager extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'phone', 'password', 'address', 'photo'];
+    protected $fillable = ['name', 'email', 'phone', 'password', 'address', 'photo', 'gender'];
     protected $hidden = ['password'];
 
     public function getPhotoAttribute($value)
     {
         $actual_link = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
         return ($value == null ? '' : $actual_link . 'images/managers/' . $value);
+    }
+
+    public function malls()
+    {
+        return $this->hasMany(Mall::class, 'manager_id', 'id');
     }
 }
