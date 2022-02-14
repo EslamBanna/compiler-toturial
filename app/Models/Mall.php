@@ -22,4 +22,8 @@ class Mall extends Model
         $actual_link = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
         return ($value == null ? '' : $actual_link . 'images/malls/' . $value);
     }
+
+    public function departments(){
+        return $this->hasMany(Dpartment::class,'mall_id', 'id');
+    }
 }

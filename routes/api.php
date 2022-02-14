@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DepartmentContoller;
 use App\Http\Controllers\MallController;
 use App\Http\Controllers\MangerContoller;
+use App\Http\Controllers\VendorContoller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +39,15 @@ Route::get('/get-mall/{mallId}',[MallController::class,'getMall']);
 Route::get('/get-malls',[MallController::class,'getMalls']);
 Route::put('/update-mall/{mallId}', [MallController::class,'updateMall']);
 Route::delete('/delete-mall/{mallId}',[MallController::class,'deleteMall']);
+################################################
+Route::post('/insert-department',[DepartmentContoller::class,'insertDepartment']);
+Route::get('/get-department/{departmentId}',[DepartmentContoller::class,'getDepartment']);
+Route::get('/get-departments',[DepartmentContoller::class,'getDepartments']);
+Route::put('/update-department/{departmentId}',[DepartmentContoller::class,'updateDepartment']);
+Route::delete('/delete-department/{departmentId}', [DepartmentContoller::class,'deleteDepartment']);
+#####################################
+Route::post('/insert-vendor', [VendorContoller::class,'insertVendor']);
+Route::get('/get-vendor/{vendorId}', [VendorContoller::class,'getVendor']);
+Route::get('/get-vendors', [VendorContoller::class,'getVendors']);
+Route::put('/update-vendor/{vendorId}', [VendorContoller::class,'updateVendor']);
+
