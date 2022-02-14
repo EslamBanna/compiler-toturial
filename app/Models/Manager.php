@@ -22,4 +22,14 @@ class Manager extends Model
     {
         return $this->hasMany(Mall::class, 'manager_id', 'id');
     }
+
+    public static function boot()
+    {
+        parent::boot();
+        self::deleting(function ($manager) {
+            $manager->malls()->each(function ($mall) {
+                $mall->delete();
+            });
+        });
+    }
 }

@@ -14,4 +14,19 @@ class Dpartment extends Model
     {
         return $this->belongsTo(Mall::class, 'mall_id', 'id');
     }
+
+    public function vendors()
+    {
+        return $this->hasMany(Vendor::class, 'department_id', 'id');
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+        self::deleting(function ($department) {
+            $department->vendors()->each(function ($vendor) {
+                $vendor->delete();
+            });
+        });
+    }
 }

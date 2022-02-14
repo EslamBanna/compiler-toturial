@@ -82,7 +82,6 @@ class MangerContoller extends Controller
             if (!$manager) {
                 return $this->returnError(202, 'this manager is not founded');
             }
-            $manager->malls()->delete();
             $manager->delete();
             return $this->returnSuccessMessage('deleted successfully');
         } catch (\Exception $e) {
