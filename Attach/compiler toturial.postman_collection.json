@@ -1,0 +1,751 @@
+{
+	"info": {
+		"_postman_id": "0c875f95-f6e4-431c-8457-169f00eed1b0",
+		"name": "compiler toturial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "managers",
+			"item": [
+				{
+					"name": "insert manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "eslam",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "tanta",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eslamelbanna03@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01210732007",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "qwe",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/insert-manager",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert-manager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get managers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-managers",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-managers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get manager",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-manager/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-manager",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update manager",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ahmed\",\r\n    \"email\": \"ahmed@gmail.com\",\r\n    \"phone\": \"0123\",\r\n    \"password\": \"vbn\",\r\n    \"address\": \"cairo\",\r\n    \"gender\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/update-manager/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"update-manager",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete manager",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/delete-manager/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete-manager",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "malls",
+			"item": [
+				{
+					"name": "insert malll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "manager_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "alex",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0147",
+									"type": "text"
+								},
+								{
+									"key": "space",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "lorem",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/insert-mall",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert-mall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get mall",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-mall/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-mall",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all malls",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-malls",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-malls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update mall",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mall tanta\",\r\n    \"address\": \"tanta\",\r\n    \"phone\": \"012\",\r\n    \"space\": 10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/update-mall/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"update-mall",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete mall",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/delete-mall/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete-mall",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "departments",
+			"item": [
+				{
+					"name": "insert department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mall_id\": 2,\r\n    \"name\": \"foods\",\r\n    \"description\": \"none\",\r\n    \"note\": \"good depart\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/insert-department",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert-department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-department/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-department",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get departments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-departments",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-departments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mall_id\": 2,\r\n    \"name\": \"clothes\",\r\n    \"description\": \"this depart for clothes\",\r\n    \"note\": \"we need more clothes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/update-department/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"update-department",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete department",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/delete-department/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete-department",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vendors",
+			"item": [
+				{
+					"name": "insert vendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "department_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "zara",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "015",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "for clothes",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "cheap",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/insert-vendor",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert-vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vendor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-vendor/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-vendor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vendors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-vendors",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-vendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update vendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"department_id\": 2,\r\n    \"name\": \"watch\",\r\n    \"phone\": \"010\",\r\n    \"description\": \"new\",\r\n    \"note\": \"good\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/update-vendor/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"update-vendor",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete vendor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/delete-vendor/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete-vendor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "insert product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "lambada",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "snacks",
+									"type": "text"
+								},
+								{
+									"key": "manufacture_company",
+									"value": "xckiu",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/insert-product",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"insert-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-product/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get-products",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get-products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"asd\",\r\n    \"description\": \"test\",\r\n    \"manufacture_company\": \"rttr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/update-product/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"update-product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/delete-product/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delete-product",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vendor product",
+			"item": [
+				{
+					"name": "create vendor product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendor_id\": 5,\r\n    \"product_id\": 1,\r\n    \"price\": 100,\r\n    \"note\": \"has dicount 2%\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/create-vendor-product",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"create-vendor-product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

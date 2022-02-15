@@ -23,4 +23,18 @@ class VendorProductController extends Controller
             return $this->returnError(201, $e->getMessage());
         }
     }
+
+    public function deleteVendorProduct($vendorProductId)
+    {
+        try {
+            $vendorProduct = VendorProduct::find($vendorProductId);
+            if (!$vendorProduct) {
+                return $this->returnError(202, 'this vendor product is not founded');
+            }
+            $vendorProduct->delete();
+            return $this->returnSuccessMessage('the vendor is deleted successfully');
+        } catch (\Exception $e) {
+            return $this->returnError(201, $e->getMessage());
+        }
+    }
 }
