@@ -82,4 +82,5 @@ Route::group(['prefix' => 'vendor-product'], function () {
     Route::delete('/delete-vendor-product/{vendorProductId}', [VendorProductController::class, 'deleteVendorProduct']);
 });
 
+Route::post('/register',[UserController::class,'register']);
 Route::post('/login', [UserController::class, 'login']);

@@ -26,4 +26,22 @@ class UserController extends Controller
         ];
         return $this->returnData('data', $data);
     }
+
+    public function register(Request $request)
+    {
+        try {
+            $checkUser = User::where('email', $request->email)->first();
+            if ($checkUser) {
+                return $this->returnError(201, 'this account is existed already');
+            }
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+            return $this->returnSuccessMessage('success');
+        } catch (\Exception $e) {
+            return $this->returnError(201, $e->getMessage());
+        }
+    }
 }

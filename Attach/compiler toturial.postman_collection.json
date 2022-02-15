@@ -12,7 +12,13 @@
 					"name": "insert manager",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|EGqqtsgfoX2jRNQBiiRh3goBFafMbtc1RxW6W1KR",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -28,12 +34,12 @@
 								},
 								{
 									"key": "email",
-									"value": "eslamelbanna03@gmail.com",
+									"value": "eslamelbanna07@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "phone",
-									"value": "01210732007",
+									"value": "01210732005",
 									"type": "text"
 								},
 								{
@@ -54,13 +60,14 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/insert-manager",
+							"raw": "localhost:8000/api/managers/insert-manager",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"managers",
 								"insert-manager"
 							]
 						}
@@ -71,15 +78,22 @@
 					"name": "get managers",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|EGqqtsgfoX2jRNQBiiRh3goBFafMbtc1RxW6W1KR",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "localhost:8000/api/get-managers",
+							"raw": "localhost:8000/api/managers/get-managers",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"managers",
 								"get-managers"
 							]
 						}
@@ -90,17 +104,24 @@
 					"name": "get manager",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|EGqqtsgfoX2jRNQBiiRh3goBFafMbtc1RxW6W1KR",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "localhost:8000/api/get-manager/3",
+							"raw": "localhost:8000/api/managers/get-manager/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"managers",
 								"get-manager",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -121,13 +142,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/update-manager/1",
+							"raw": "localhost:8000/api/managers/update-manager/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"managers",
 								"update-manager",
 								"1"
 							]
@@ -141,13 +163,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/delete-manager/1",
+							"raw": "localhost:8000/api/managers/delete-manager/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"managers",
 								"delete-manager",
 								"1"
 							]
@@ -206,13 +229,14 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/insert-mall",
+							"raw": "localhost:8000/api/malls/insert-mall",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"malls",
 								"insert-mall"
 							]
 						}
@@ -225,13 +249,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/get-mall/6",
+							"raw": "localhost:8000/api/malls/get-mall/6",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"malls",
 								"get-mall",
 								"6"
 							]
@@ -245,13 +270,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/get-malls",
+							"raw": "localhost:8000/api/malls/get-malls",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"malls",
 								"get-malls"
 							]
 						}
@@ -273,13 +299,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/update-mall/5",
+							"raw": "localhost:8000/api/malls/update-mall/5",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"malls",
 								"update-mall",
 								"5"
 							]
@@ -293,13 +320,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/delete-mall/4",
+							"raw": "localhost:8000/api/malls/delete-mall/4",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"malls",
 								"delete-mall",
 								"4"
 							]
@@ -327,13 +355,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/insert-department",
+							"raw": "localhost:8000/api/departments/insert-department",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"departments",
 								"insert-department"
 							]
 						}
@@ -346,13 +375,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/get-department/1",
+							"raw": "localhost:8000/api/departments/get-department/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"departments",
 								"get-department",
 								"1"
 							]
@@ -366,13 +396,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/get-departments",
+							"raw": "localhost:8000/api/departments/get-departments",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"departments",
 								"get-departments"
 							]
 						}
@@ -394,13 +425,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/update-department/1",
+							"raw": "localhost:8000/api/departments/update-department/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"departments",
 								"update-department",
 								"1"
 							]
@@ -414,13 +446,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/delete-department/1",
+							"raw": "localhost:8000/api/departments/delete-department/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"departments",
 								"delete-department",
 								"1"
 							]
@@ -474,13 +507,14 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/insert-vendor",
+							"raw": "localhost:8000/api/vendors/insert-vendor",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"vendors",
 								"insert-vendor"
 							]
 						}
@@ -493,13 +527,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/get-vendor/3",
+							"raw": "localhost:8000/api/vendors/get-vendor/3",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"vendors",
 								"get-vendor",
 								"3"
 							]
@@ -513,13 +548,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/get-vendors",
+							"raw": "localhost:8000/api/vendors/get-vendors",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"vendors",
 								"get-vendors"
 							]
 						}
@@ -541,13 +577,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/update-vendor/2",
+							"raw": "localhost:8000/api/vendors/update-vendor/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"vendors",
 								"update-vendor",
 								"2"
 							]
@@ -561,13 +598,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/delete-vendor/3",
+							"raw": "localhost:8000/api/vendors/delete-vendor/3",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"vendors",
 								"delete-vendor",
 								"3"
 							]
@@ -611,13 +649,14 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/insert-product",
+							"raw": "localhost:8000/api/products/insert-product",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"products",
 								"insert-product"
 							]
 						}
@@ -630,13 +669,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/get-product/2",
+							"raw": "localhost:8000/api/products/get-product/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"products",
 								"get-product",
 								"2"
 							]
@@ -650,13 +690,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/get-products",
+							"raw": "localhost:8000/api/products/get-products",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"products",
 								"get-products"
 							]
 						}
@@ -678,13 +719,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/update-product/2",
+							"raw": "localhost:8000/api/products/update-product/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"products",
 								"update-product",
 								"2"
 							]
@@ -698,13 +740,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/api/delete-product/3",
+							"raw": "localhost:8000/api/products/delete-product/3",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"products",
 								"delete-product",
 								"3"
 							]
@@ -732,14 +775,106 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/create-vendor-product",
+							"raw": "localhost:8000/api/vendor-product/create-vendor-product",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"vendor-product",
 								"create-vendor-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create vendor product Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/vendor-product/delete-vendor-product/16",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendor-product",
+								"delete-vendor-product",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"eslam@elbanna.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ahmed\",\r\n    \"email\": \"eslam2@elbanna.com\",\r\n    \"password\": \"456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
 							]
 						}
 					},

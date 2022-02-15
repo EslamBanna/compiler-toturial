@@ -1,0 +1,12 @@
+public -> index.php
+$app->bind('path.public',function(){
+    return __DIR__;
+});
+------------
+config folder
+->app.php
+encryption
+base64_decode('')
+debug true
+->database.php
+like .env
